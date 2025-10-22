@@ -1,0 +1,24 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+
+[project]
+name = "calc"
+version = "0.1.0"
+description = "A tiny calculator CLI used for learning."
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = ["typer>=0.12", "rich>=13.7"]
+
+
+[project.scripts]
+calc = "calc.cli:app"
+
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+
+[tool.setuptools.packages.find]
+where = ["src"]
